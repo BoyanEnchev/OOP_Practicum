@@ -7,12 +7,15 @@ using namespace std;
 
 class Filter
 {
-private:
+protected:
 	ifstream ifile;
 	ofstream ofile;
+	string iFileName;
+	string oFileName;
 public:
-	Filter(const Filter &other);
-	Filter &operator=(const Filter &other);
+	Filter();
+	Filter(string, string);
+	void Open(string, string);
+	void Close();
 
-	void ckeckWordin(string word, string ifile, string ofile);
 };
